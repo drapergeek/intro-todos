@@ -2,6 +2,10 @@ When /^I go to the homepage$/ do
   visit "/"
 end
 
+Given /^I am on the homepage$/ do
+  visit "/"
+end
+
 Then /^I should see the product name$/ do
   page.should have_css("h1", text: "Welcome to Do It TDD")
 end
