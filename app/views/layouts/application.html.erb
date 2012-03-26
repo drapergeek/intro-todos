@@ -7,9 +7,9 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <% if session[:current_user] %>
+    <% if signed_in? %>
       <div data-role="user-identification">
-        <%= session[:current_user] %>
+        <%= current_user %>
       </div>
       <%= link_to "Sign Out", sessions_path, method: :delete %>
     <% end %>
