@@ -1,4 +1,9 @@
 <%= form_for @todo do |f| %>
+  <ul class="errors">
+    <% @todo.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.submit "Create" %>
