@@ -12,7 +12,9 @@
         <%= current_user %>
       </div>
       <%= link_to "Sign Out", sessions_path, method: :delete %>
-    <% end %>
+    <% else %>
+      <%= link_to "Sign up for an account", sign_up_path %>
+     <% end %>
 
     <%= yield %>
 
