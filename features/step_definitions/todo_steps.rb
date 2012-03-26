@@ -23,3 +23,19 @@ Then /^I should see a message telling me the todo needs a title$/ do
     page.should have_css("li", text: /Title/)
   end
 end
+
+Then /^I should see the following todos:$/ do |table|
+  todos = table.raw.flatten
+  todos.each do |todo|
+    step %{"#{todo}" should be in my list of things to do}
+  end
+end
+
+Then /^I should not see the following todos:$/ do |table|
+  todos = table.raw.flatten
+  todos.each do |todo|
+    within "ul.todos" do
+      page.should_not have_css("li", text: todo)
+    end
+  end
+end
