@@ -5,7 +5,7 @@ Feature: Sign up for an account
 
   Scenario: Create an account from the homepage
     Given I am on the homepage
-    When I registrater for an account with the email "person@example.com"
+    When I register for an account with the email "person@example.com"
     Then I should be signed in as "person@example.com"
 
 
