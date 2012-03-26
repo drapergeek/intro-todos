@@ -4,7 +4,7 @@ Feature: Sign out of the application
   I should to be able to sign out
 
   Scenario:
-    Given I am logged in as "person@example.com"
+    Given I have signed in as "person@example.com"
     When I sign out
     Then I should be signed out
 
