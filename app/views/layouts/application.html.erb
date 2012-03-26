@@ -7,6 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div data-role="user-identification">
+    <%= session[:current_user] %>
+  </div>
 
 <%= yield %>
 

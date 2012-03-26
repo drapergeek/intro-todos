@@ -6,5 +6,5 @@ When /^I registrater for an account with the email "([^"]*)"$/ do |email_address
 end
 
 Then /^I should be signed in as "([^"]*)"$/ do |email_address|
-
+  page.should have_css("[data-role='user-identification']", text: email_address)
 end
